@@ -1,0 +1,247 @@
+/* http://meyerweb.com/eric/tools/css/reset/ 
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section {
+	display: block;
+}
+body {
+	line-height: 1;
+}
+ol, ul {
+	list-style: none;
+}
+blockquote, q {
+	quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+	content: '';
+	content: none;
+}
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+*,*::before,*::after{
+	box-sizing:border-box;
+}
+/* CSS Reset end */
+
+.attribution { font-size: 11px; text-align: center; margin: 20px; }
+.attribution a { color: hsl(228, 45%, 44%); }
+
+body{
+    display:flex;
+	flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    font-family: 'Manrope', sans-serif;
+	background: hsl(210, 46%, 95%);
+    color: hsl(217, 19%, 35%);
+	font-size: 13px;
+    line-height: 1.2rem;
+}
+
+.main{
+    display: flex;
+    width: 700px;
+    background: white;
+    border-radius: 15px;
+    box-shadow: 3px 3px 15px hsl(217, 19%, 35%);
+}
+
+.main_pic{
+    border-radius:15px 0px 0px 15px;
+    width: 40%;
+}
+
+.content{
+    width: 60%;
+    padding: 30px;
+}
+
+.content h2{
+    font-size: 20px;
+    padding: 0px 0px 10px;
+    line-height: 1.5rem;
+    font-weight: 700;
+}
+
+.content p{ 
+    padding: 0px 0px 30px;
+    color: hsl(214, 17%, 51%);
+}
+
+.contact{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: relative;
+    
+}
+
+.img_contact{
+    display:flex;
+}
+
+.img_contact img{
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    margin: 0px 20px 0px 0px;
+}
+
+.contact_text{
+    display:flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.contact_text h3{
+    font-weight: 700;
+
+}
+
+.contact_text p{
+    padding: 0px 0px 0px;
+}
+
+.share{
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    background:hsl(210, 46%, 95%);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.share:hover{
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    background:hsl(217, 19%, 35%);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.share img{
+    width: 20px;
+    height: 20px;
+}
+
+.share-bar {
+    display: none;
+    background-color: hsl(217, 19%, 35%);
+    padding: 10px;
+    position: absolute;
+    top: -60px;
+    right: -100px;
+    width: 250px;
+    z-index: 1; /* 確保位於其他內容上層 */
+    border-radius: 15px;
+    letter-spacing: 5px;
+    align-items: center;
+}
+
+.share-bar p{
+    color: hsl(210, 46%, 95%);
+    padding: 0px;
+    margin: 0px 20px 0px;   
+}
+
+.share-link{
+    display:flex;
+}
+ 
+.share-link img{
+    width: 22px;
+    margin-top: 5px;
+    margin-right: 20px;
+}
+
+.tri{
+    border-left: 11px solid transparent;
+    border-right: 11px solid transparent;
+    border-top: 11px solid hsl(217, 19%, 35%);
+    position: absolute;/* 將箭頭定位到 .share-bar 下方 */
+    top: 100%; 
+    left: 50%;
+    transform: translateX(-50%); /* 將箭頭水平置中 */
+    z-index: 2; /* 確保箭頭位於 .share-bar 上層 */
+}
+
+@media(max-width: 430px){
+	.main {
+		max-width:85%;
+        flex-direction: column;  
+	}
+    .main img{
+        width: 100%;
+    }
+    .content{
+        width: 100%;
+    }
+    .img_contact img{
+        width: 60px;
+        height: 60px;
+    }
+    .share{
+        width: 50px;
+        height: 50px;
+        background:hsl(210, 46%, 95%);
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    .share img{
+        width: 25px;
+        height: 20px;
+    }
+    .share-bar {
+        height: 90px;
+        width: 65%;
+        background-color: hsl(217, 19%, 35%);
+        padding: 10px;
+        position: fixed; /* 滾動可見 */
+        top: 660px;
+        left: 30px;
+        border-radius: 0px 0px 15px 15px;
+        letter-spacing: 5px;
+        align-items: center;
+    }
+    .share-link img{
+        width: 30px;
+        margin-top: 5px;
+        margin-right: 20px;
+    }
+    .tri{
+        display:none;
+    }
+}
