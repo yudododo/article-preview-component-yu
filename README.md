@@ -5,7 +5,10 @@ Hope that you get a grasp of my current front end skills and help me improve wha
 
 ## Screenshot🐻💥
 
-<img src="screen_desktop.png" width="80%">
+<img src="./screenshot_desktop_1.png" width="80%">
+<img src="./screenshot_desktop_2.png" width="80%">
+<img src="./screenshot_mobile_1.png" width="80%">
+<img src="./screenshot_mobile_2.png" width="80%">
 
 ## The challenge🔥
 
